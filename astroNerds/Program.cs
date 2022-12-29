@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 //builder.Services.AddScoped<IDbMethods, nazwa klasy implementuj¹cej interfejs?>(); (AddSingleton?)
-
+//builder.Services.AddScoped<HoroscopeService>(); //po³¹czyæ te dwa?
 
 var app = builder.Build();
 
