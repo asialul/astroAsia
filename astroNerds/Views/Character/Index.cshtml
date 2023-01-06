@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Zodiac>
+
+<html>
+	<head>
+
+	</head>
+	<body>
+<div class="container-fluid">
+			<div class="row col-12 bg-primary mt-3 mb-4">
+	<div class="container col-1">
+			<a class="nav-link" asp-controller="Character" asp-action="Aries">
+			<img src="thumbnails/aries.png" class="img-thumbnail" alt="Aries">
+		</a>	
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Taurus">
+			<img src="thumbnails/taurus.png" class="img-thumbnail" alt="Taurus">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Gemini">
+			<img src="thumbnails/gemini.png" class="img-thumbnail" alt="Gemini">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Cancer">
+			<img src="thumbnails/cancer.png" class="img-thumbnail" alt="Cancer">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Leo">
+			<img src="thumbnails/leo.png" class="img-thumbnail" alt="Leo">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Virgo">
+			<img src="thumbnails/virgo.png" class="img-thumbnail" alt="Virgo">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Libra">
+			<img src="thumbnails/balance.png" class="img-thumbnail" alt="Libra">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Sagittarius">
+			<img src="thumbnails/sagittarius.png" class="img-thumbnail" alt="Sagittarius">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Scorpio">
+			<img src="thumbnails/scorpio.png" class="img-thumbnail" alt="Scorpio">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Capricorn">
+			<img src="thumbnails/capricorn.png" class="img-thumbnail" alt="Capricorn">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Aquarius">
+			<img src="thumbnails/aquarius.png" class="img-thumbnail" alt="Aquarius">
+		</a>
+	</div>
+	<div class="col-1">
+		<a class="nav-link" asp-controller="Character" asp-action="Pisces">
+			<img src="thumbnails/pisces.png" class="img-thumbnail" alt="Pisces">
+		</a>
+	</div>
+	</div>
+</div>
+
+<p class="display-5">Your unique personality...</p>
+<table class="table-striped table-bordered" style="width:100%">
+	<thead>
+		<tr>
+			<th width="20%">Zodiac Sign</th>
+			<th width="80%">Character Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var obj in Model)
+		{
+			<tr>
+				<td>
+					@obj.ZodiacSign
+				</td>
+				<td>
+					<i>@obj.Description</i>
+				</td>
+
+			</tr>
+		}
+	</tbody>
+	
+</table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@{
+	ViewData["Title"] = "";
+}
+
+<html>
+<head>
+</head>
+<body>
+	<div class="display-5">Your unique personality, Taurus.</div>
+	<br />
+	<br />
+	<div class="col-10 align-self-center">
+		@foreach (var obj in Model)
+		{
+			<div class="blockquote">
+				<i>@obj.Description;</i>
+			</div>
+		}
+	</div>
+</body>
+</html>

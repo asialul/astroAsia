@@ -1,0 +1,32 @@
+﻿@using astroNerds.Models.ViewModel;
+@using static astroNerds.Models.ViewModel.BirthChartViewModel;
+@model BirthChartViewModel;
+
+
+<html>
+    <head></head>
+
+    <body>
+    <form asp-action="Index" asp-controller="Character" method="post">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" placeholder="Your name goes here" />
+        <label asp-for="Gender"></label>
+        <select asp-for="Gender" asp-items="Html.GetEnumSelectList<Genders>()"></select>
+        <label asp-for="Day"></label>
+        <select asp-for="Day" asp-items="Html.GetEnumSelectList<Days>()"></select>
+        <label asp-for="Month"></label>
+        <select asp-for="Month" asp-items="Html.GetEnumSelectList<Months>()"></select>
+       <label asp-for="Year"></label>
+        <select asp-for="Year" asp-items="Html.GetEnumSelectList<Years>()"></select>
+    <br /><button type="submit">Register</button>
+</form>
+
+    <
+      
+
+    
+       
+    </body>
+
+</html>
+
