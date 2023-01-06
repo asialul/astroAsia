@@ -45,8 +45,8 @@ namespace astroNerds.Migrations
                 columns: table => new
                 {
                     ZodiacSign = table.Column<int>(type: "int", nullable: false),
-                    dateFrom = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    dateTo = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    DateFrom = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DateTo = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -15,7 +15,7 @@
     <TABLE width="100%" align="center">
 <TR>
 <TD colspan="2">
-<FORM method="post" action="/natal.php">
+<FORM method="post" asp-action="/natal.php">
 
 <FORM width="100%" border="2" cellpadding="3">
 <TR>
@@ -54,23 +54,15 @@ He<INPUT type="radio" name="sex" value="1"> She<INPUT type="radio" name="sex" va
  Unknown Time
  </TD>
  </TR>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ </FORM>
+                <a class="btn btn-primary" href="@Url.Action("Index", "Character", "CharacterController")">Submit</a>
+                <form method="post">
+                    <button asp-route="Custom">Click Me</button>
+                    <input type="submit" src="..." alt="Or Click Me" asp-route="Custom">
+                </form>
 </FORM>
-</FORM>
+                          
 </div>
+<div>
+            
+        </div>

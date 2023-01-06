@@ -13,10 +13,12 @@ namespace astroNerds.Models
         public ZodiacSign ZodiacSign { get; set; }
 
         [Required]
-        public DateTime dateFrom { get; set; }
+        public DateTime DateFrom { get; set; }
 
         [Required]
-        public DateTime dateTo { get; set; }
-       
+        public DateTime DateTo { get; set; }
+
+        public string? Description { get; set; }
+
     }
 }

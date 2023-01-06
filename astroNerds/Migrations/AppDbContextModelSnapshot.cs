@@ -69,11 +69,14 @@ namespace astroNerds.Migrations
                     b.Property<int>("ZodiacSign")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("dateFrom")
+                    b.Property<DateTime>("DateFrom")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("dateTo")
+                    b.Property<DateTime>("DateTo")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ZodiacSign");
 

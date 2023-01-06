@@ -1,15 +1,15 @@
+using astroNerds.Controllers;
 using astroNerds.Models;
 using astroNerds.Models.Data;
+using astroNerds.Models.ViewModel;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-//builder.Services.AddScoped<IDbMethods, nazwa klasy implementuj¹cej interfejs?>(); (AddSingleton?)
-//builder.Services.AddScoped<HoroscopeService>(); //po³¹czyæ te dwa?
-
+builder.Services.AddScoped<BirthChartViewModel>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
